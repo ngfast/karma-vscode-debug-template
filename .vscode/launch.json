@@ -1,0 +1,32 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [{
+    "type": "chrome",
+    "request": "launch",
+    "timeout": 20000,
+    "name": "Karma Tests",
+    "sourceMaps": true,
+    "webRoot": "${workspaceRoot}",
+    "url": "http://localhost:9876/debug.html",
+    // "urlFilter": "*debug.html",
+    "address": "localhost",
+    "port": 9332,
+    "runtimeArgs": [
+      "--headless"
+    ],
+    "pathMapping": {
+      "/": "${workspaceRoot}",
+      "/base/": "${workspaceRoot}/src"
+    },
+    "sourceMapPathOverrides": {
+      "webpack:///./*": "${webRoot}/*",
+      "webpack:///src/*": "${webRoot}/*",
+      "webpack:///*": "*",
+      "webpack:///./~/*": "${webRoot}/node_modules/*",
+      "meteor://💻app/*": "${webRoot}/*"
+    }
+  }]
+}

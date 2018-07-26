@@ -11,6 +11,12 @@
         "kind": "test",
         "isDefault": true
       }
+    },
+    {
+      "label": "Executar Aplicação (npm start)",
+      "identifier": "npm_start",
+      "type": "npm",
+      "script": "start"
     }
   ]
 }
